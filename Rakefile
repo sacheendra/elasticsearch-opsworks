@@ -91,7 +91,7 @@ end
 def create_instance(stack_id, layer_id, az)
   opsworks.create_instance({:stack_id => stack_id,
                             :layer_ids => [layer_id],
-                            :instance_type => ENV['INSTANCE_TYPE'] || 'c3.large',
+                            :instance_type => ENV['INSTANCE_TYPE'] || 'c4.4xlarge',
                             :install_updates_on_boot => !ENV['SKIP_INSTANCE_PACKAGE_UPDATES'],
                             :availability_zone => az})
 end
